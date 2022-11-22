@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Nov-2022 às 01:14
+-- Tempo de geração: 08-Nov-2022 às 02:04
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.0.19
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `petshop`
+-- Banco de dados: `consumo_energia`
 --
 
 -- --------------------------------------------------------
@@ -28,13 +28,26 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cliente` (
-  `id` int(50) NOT NULL,
-  `nome` varchar(50) NOT NULL,
-  `sobrenome` varchar(50) NOT NULL,
-  `telefone` varchar(50) NOT NULL,
-  `nascimento` varchar(50) NOT NULL,
-  `nomepet` varchar(50) NOT NULL
+  `id` int(11) NOT NULL,
+  `nome` varchar(30) NOT NULL,
+  `sexo` varchar(30) NOT NULL,
+  `endereco` varchar(30) NOT NULL,
+  `cep` varchar(30) NOT NULL,
+  `bairro` varchar(30) NOT NULL,
+  `cpf` varchar(30) NOT NULL,
+  `nascimento` varchar(30) NOT NULL,
+  `data_vencimento` varchar(30) NOT NULL,
+  `unidade_consumidora` varchar(30) NOT NULL,
+  `kwh` varchar(30) NOT NULL,
+  `valor_total` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `cliente`
+--
+
+INSERT INTO `cliente` (`id`, `nome`, `sexo`, `endereco`, `cep`, `bairro`, `cpf`, `nascimento`, `data_vencimento`, `unidade_consumidora`, `kwh`, `valor_total`) VALUES
+(1, 'errer', 'Masculino', 'rerter', '3243243', 'ewrwer', '3423423', '2022-11-09', '2022-11-16', 'ewrwerw', '231312', '23123');
 
 --
 -- Índices para tabelas despejadas
@@ -54,7 +67,7 @@ ALTER TABLE `cliente`
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
